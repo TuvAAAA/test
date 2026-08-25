@@ -1,3 +1,6 @@
+import copy
+
+
 class Bil:
     def __init__(self):
         self.regnummer = ""
@@ -5,6 +8,20 @@ class Bil:
         self.årsmodell = ""
         self.tjänstevikt = ""
         self.motoreffekt = ""
+        self.person = ""
+        self.bilförare = None
+
+
+class Person:
+    def __init__(self):
+            self.namn = ''
+
+
+p = Bil()
+p.person = Person()
+p.person.namn = "Robert"
+
+            
 
 
 Bil1 = Bil()
@@ -21,8 +38,13 @@ Bil2.motoreffekt ="89hk"
 Bil2.tjänstevikt = "880kg"
 Bil2.årsmodell = "2016"
 
+Bil3 = copy.copy(Bil2)
+Bil3.regnummer = "5632577"
+
 
 print("2010 Dodge Challenger R/T Coupe 2D RWD:  ", Bil1.årsmodell, Bil1.tjänstevikt, Bil1.motoreffekt, Bil1.fabrikat, Bil1.regnummer)
 
 
 print("2016 smart fortwo passion RWD: ", Bil2.årsmodell, Bil2.tjänstevikt, Bil2.motoreffekt, Bil2.fabrikat, Bil2.regnummer)
+
+print(p.person.namn)
