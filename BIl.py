@@ -13,14 +13,16 @@ class Bil:
 
 
 class Person:
-    def __init__(self):
-            self.namn = ''
+    def namn(self):
+            self.namn = ""
 
 
-p = Bil()
-p.person = Person()
-p.person.namn = "Robert"
-
+p1 = Bil()
+p1.person = Person()
+p1.person.namn = "Robert"
+p2 =Bil()
+p2.person = Person()
+p2.person.namn = "jojo siwa"
             
 
 
@@ -47,4 +49,6 @@ print("2010 Dodge Challenger R/T Coupe 2D RWD:  ", Bil1.årsmodell, Bil1.tjänst
 
 print("2016 smart fortwo passion RWD: ", Bil2.årsmodell, Bil2.tjänstevikt, Bil2.motoreffekt, Bil2.fabrikat, Bil2.regnummer)
 
-print(p.person.namn)
+print(p1.person.namn)
+
+print(p2.person.namn)
